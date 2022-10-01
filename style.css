@@ -20,6 +20,7 @@ nav{
     align-items: center;
     padding: 20px 40px;
     color: #fff;
+    /* position: relative; */
 }
 
 .navLinks{
@@ -27,22 +28,22 @@ nav{
     width: 100vw;
     height: 100vh;
     position: absolute;
-    transform: translate(-50%, -50%);
-    top: 45.5%;
-    right: 50%;
+    top: 6.8%;
+    left: -100%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #fff;
     text-align: center;
     flex-direction: column;
-    z-index: 999;
+    z-index: 1;
     padding: 0 20px;
     transition: .5s;
 }
 
 .container{
-    height: 100vh;
+    /* height: 100vh; */
+    padding-top: 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -175,5 +176,9 @@ button{
 
     nav{
         padding: 10px;
+    }
+
+    .navLinks{
+        top: 5.7%;
     }
 }
