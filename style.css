@@ -115,7 +115,7 @@ button{
 
 @media screen and (max-width:576px){
     .container{
-        margin: 0;
+        margin: 5rem 0;
     }
 
     #gameBoard{
@@ -130,6 +130,6 @@ button{
     }
 
     .score{
-        margin-bottom: 3rem;
+        margin-bottom: 7rem;
     }
 }
