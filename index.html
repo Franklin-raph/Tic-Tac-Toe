@@ -4,49 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Frank Tic Tac Toe</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <nav>
-        <h3>Tic Tac Toe</h3>
-        <i>=</i>
+        <h2>Tic Tac Toe</h2>
+        <i class="ri-menu-line" onclick="openNav()" style="font-size: 22px; cursor: pointer;"></i>
+        <div class="navLinks">
+            <a href="#">Home</a>
+            <a href="#">Home</a>
+        </div>
     </nav>
-    <div class="modalWrapper">
-        <div>
-            <h1 class="winnerPlayerText"></h1>
-            <button onclick="restartGame()">Restart</button>
-        </div>
-    </div>
-    <div class="container">
-        <h1 class="currentPlayerText"></h1>
-        <button onclick="restartGame()">Restart</button>
-        <div id="gameBoard">
-            <div class="box" id="0"></div>
-            <div class="box" id="1"></div>
-            <div class="box" id="2"></div>
-            <div class="box" id="3"></div>
-            <div class="box" id="4"></div>
-            <div class="box" id="5"></div>
-            <div class="box" id="6"></div>
-            <div class="box" id="7"></div>
-            <div class="box" id="8"></div>
-        </div>
-        <div class="score">
-            <div class="scoreNumbers">
-                <div>
-                    <p>Player X Score</p><span class="playerXScore"></span>
-                </div>
-                <div>
-                    <p>Player O Score</p><span class="playerOScore"></span>
-                </div>
+
+    <div class="">
+        <div class="modalWrapper">
+            <div>
+                <h1 class="winnerPlayerText"></h1>
+                <button onclick="restartGame()">Restart</button>
             </div>
-            <button onclick="resetScore()">Reset Score</button>
         </div>
-    </div>
-    <div class="footer">
-     <p>Copyright &copy; since <script> document.write(new Date().getFullYear()) </script> </p>
-     <p style="font-size: 14px; font-weight: 700;">Built by Franklin (a.k.a => AZA MAN)</p>
+        <div class="container">
+            <h1 class="currentPlayerText"></h1>
+            <button onclick="restartGame()">Restart</button>
+            <div id="gameBoard">
+                <div class="box" id="0"></div>
+                <div class="box" id="1"></div>
+                <div class="box" id="2"></div>
+                <div class="box" id="3"></div>
+                <div class="box" id="4"></div>
+                <div class="box" id="5"></div>
+                <div class="box" id="6"></div>
+                <div class="box" id="7"></div>
+                <div class="box" id="8"></div>
+            </div>
+            <div class="score">
+                <div class="scoreNumbers">
+                    <div>
+                        <p>Player X Score</p><span class="playerXScore"></span>
+                    </div>
+                    <div>
+                        <p>Player O Score</p><span class="playerOScore"></span>
+                    </div>
+                </div>
+                <button onclick="resetScore()">Reset Score</button>
+            </div>
+        </div>
+        <div class="footer">
+         <p>Copyright &copy; since <script> document.write(new Date().getFullYear()) </script> </p>
+         <p style="font-size: 14px; font-weight: 700;">Built by Franklin (a.k.a => AZA MAN)</p>
+        </div>
     </div>
 
     <script src="/main.js"></script>

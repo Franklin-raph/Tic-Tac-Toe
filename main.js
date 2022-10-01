@@ -5,6 +5,7 @@ const currentPlayerText = document.querySelector('.currentPlayerText')
 const modalWrapper = document.querySelector('.modalWrapper')
 const winnerPlayerText = document.querySelector('.winnerPlayerText')
 const html = document.querySelector('html')
+const navLinks = document.querySelector('.navLinks')
 
 const X_TEXT = 'X';
 const O_TEXT = 'O';
@@ -120,4 +121,9 @@ function resetScore(){
     O_SCORE = 0
     playerOScore.innerText = O_SCORE
     playerXScore.innerText = X_SCORE
+}
+
+
+function openNav(){
+    navLinks.style.top = (navLinks.style.top === '47%') ? '-47%' : '47%';
 }
