@@ -19,7 +19,7 @@ html, body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: 10rem;
+    margin-top: 1rem;
 }
 
 .currentPlayer{
@@ -72,9 +72,8 @@ button{
     margin-top: 50px;
     display: flex;
     text-align: center;
-    gap: 30px;
+    gap: 10px;
     flex-direction: column;
-    margin-bottom: 15rem;
 }
 
 .scoreNumbers{
@@ -95,12 +94,12 @@ button{
 }
 
 .score button{
-    display: inline-block;
+    width: 50%;
+    margin: 0 auto;
 }
 
 .footer{
-    position: fixed;
-    bottom: 0;
+    position: relative;
     background-color: #123456;
     color: #fff;
     text-align: center;
@@ -111,11 +110,12 @@ button{
     flex-direction: column;
     padding: 10px;
     gap: 5px;
+    margin-top: 3rem;
 }
 
 @media screen and (max-width:576px){
     .container{
-        margin: 5rem 0;
+        /* margin: 5rem 0; */
     }
 
     #gameBoard{
@@ -130,6 +130,6 @@ button{
     }
 
     .score{
-        margin-bottom: 7rem;
+        /* margin-bottom: 2rem; */
     }
 }
