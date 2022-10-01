@@ -126,4 +126,5 @@ function resetScore(){
 
 function openNav(){
     navLinks.style.top = (navLinks.style.top === '47%') ? '-47%' : '47%';
+    html.style.overflowY = (html.style.overflowY = "scroll") ? 'hidden' : 'scroll'
 }
