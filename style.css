@@ -132,6 +132,10 @@ button{
     visibility: hidden;
 }
 
+.modalWrapper div{
+    margin-bottom: 6rem;
+}
+
 .modalWrapper h1{
     font-size: 40px;
 }

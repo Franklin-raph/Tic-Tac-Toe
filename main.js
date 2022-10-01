@@ -4,6 +4,7 @@ const playerOScore = document.querySelector('.playerOScore')
 const currentPlayerText = document.querySelector('.currentPlayerText')
 const modalWrapper = document.querySelector('.modalWrapper')
 const winnerPlayerText = document.querySelector('.winnerPlayerText')
+const html = document.querySelector('html')
 
 const X_TEXT = 'X';
 const O_TEXT = 'O';
@@ -33,6 +34,7 @@ function boxClicked(e){
             modalWrapper.style.visibility = "visible"
             winnerPlayerText.innerText = `Player ${currentPlayer} has won!!!`
             let wininngPlayer = currentPlayerText.innerText
+            html.style.overflowY = "hidden"
             
             if(wininngPlayer.toString().split('')[7] === "X"){
                 X_SCORE++
@@ -110,6 +112,7 @@ function restartGame(){
     currentPlayerText.innerText = `Player ${currentPlayer} TURN`
 
     modalWrapper.style.visibility = "hidden"
+    html.style.overflowY = "scroll"
 }
 
 function resetScore(){
