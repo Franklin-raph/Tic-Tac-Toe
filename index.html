@@ -8,14 +8,17 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+    <nav>
+        <h3>Tic Tac Toe</h3>
+        <i>=</i>
+    </nav>
     <div class="modalWrapper">
-        <h1 class="currentPlayer"></h1>
+        <h1 class="winnerPlayerText"></h1>
         <button onclick="restartGame()">Restart</button>
     </div>
     <div class="container">
-        <h1>Tic Tac Toe</h1>
+        <h1 class="currentPlayerText"></h1>
         <button onclick="restartGame()">Restart</button>
-        <h3 class="currentPlayer"></h3>
         <div id="gameBoard">
             <div class="box" id="0"></div>
             <div class="box" id="1"></div>

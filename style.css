@@ -13,6 +13,15 @@ html, body{
     width: 100%;
 }
 
+nav{
+    display: flex;
+    background-color: #123456;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    color: #fff;
+}
+
 .container{
     height: 100vh;
     display: flex;
@@ -20,10 +29,6 @@ html, body{
     justify-content: center;
     flex-direction: column;
     margin-top: 1rem;
-}
-
-.currentPlayer{
-    margin-top: 8px;
 }
 
 button{
@@ -132,9 +137,6 @@ button{
 }
 
 @media screen and (max-width:576px){
-    .container{
-        /* margin: 5rem 0; */
-    }
 
     #gameBoard{
         width: 330px;
@@ -145,9 +147,5 @@ button{
         width: 110px;
         height: 110px;
         font-size: 70px;
-    }
-
-    .score{
-        /* margin-bottom: 2rem; */
     }
 }

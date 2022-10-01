@@ -1,8 +1,9 @@
 const boxes = document.querySelectorAll('.box')
-const currentPlayerEl = document.querySelector('.currentPlayer')
 const playerXScore = document.querySelector('.playerXScore')
 const playerOScore = document.querySelector('.playerOScore')
+const currentPlayerText = document.querySelector('.currentPlayerText')
 const modalWrapper = document.querySelector('.modalWrapper')
+const winnerPlayerText = document.querySelector('.winnerPlayerText')
 
 const X_TEXT = 'X';
 const O_TEXT = 'O';
@@ -11,7 +12,8 @@ let O_SCORE = 0
 playerOScore.innerText = O_SCORE
 playerXScore.innerText = X_SCORE
 let currentPlayer = X_TEXT;
-currentPlayerEl.innerText = `Player ${currentPlayer} TURN`
+currentPlayerText.innerText = `Player ${currentPlayer} TURN`
+currentPlayerText.style.marginBottom = "20px"
 
 
 // spaes array would help us keep track of what is in the boxes
@@ -27,10 +29,11 @@ function boxClicked(e){
         e.target.innerText = currentPlayer;
 
         if(playerHasWon() !== false){
-            currentPlayerEl.innerText = `Player ${currentPlayer} has won!!!`
+            currentPlayerText.innerText = `Player ${currentPlayer} has won!!!`
             modalWrapper.style.visibility = "visible"
-            let wininngPlayer = currentPlayerEl.innerText
-
+            winnerPlayerText.innerText = `Player ${currentPlayer} has won!!!`
+            let wininngPlayer = currentPlayerText.innerText
+            
             if(wininngPlayer.toString().split('')[7] === "X"){
                 X_SCORE++
                 playerXScore.innerText = X_SCORE
@@ -46,7 +49,7 @@ function boxClicked(e){
             return;
         }
         currentPlayer = currentPlayer === X_TEXT ? O_TEXT : X_TEXT
-        currentPlayerEl.innerText = `Player ${currentPlayer} TURN`
+        currentPlayerText.innerText = `Player ${currentPlayer} TURN`
     }
 }
 
@@ -104,7 +107,7 @@ function restartGame(){
     })
 
     currentPlayer = X_TEXT;
-    currentPlayerEl.innerText = `Player ${currentPlayer} TURN`
+    currentPlayerText.innerText = `Player ${currentPlayer} TURN`
 
     modalWrapper.style.visibility = "hidden"
 }
