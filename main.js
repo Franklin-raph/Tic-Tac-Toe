@@ -97,6 +97,10 @@ function playerHasWon(){
             console.log(typeof currentPlayer)
             return [4,7,1];
         }
+        if(spaces[2] === currentPlayer && spaces[6] === currentPlayer){
+            console.log(typeof currentPlayer)
+            return [4,2,6];
+        }
     }
     return false
 }
