@@ -93,15 +93,16 @@ button{
 
 @media screen and (max-width:576px){
     .container{
-        margin: 2.5rem 0 3rem;
+        margin: 5rem 0;
     }
 
     #gameBoard{
-        width: 300px;
+        width: 330px;
+        margin: 3rem 0 0;
     }
 
     .box{
-        width: 100px;
+        width: 110px;
         height: 110px;
         font-size: 70px;
     }
