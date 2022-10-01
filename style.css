@@ -113,6 +113,24 @@ button{
     margin-top: 3rem;
 }
 
+.modalWrapper{
+    background-color: #000000de;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    flex-direction: column;
+    visibility: hidden;
+}
+
+.modalWrapper h1{
+    font-size: 40px;
+}
+
 @media screen and (max-width:576px){
     .container{
         /* margin: 5rem 0; */

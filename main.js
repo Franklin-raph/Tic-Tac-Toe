@@ -2,6 +2,7 @@ const boxes = document.querySelectorAll('.box')
 const currentPlayerEl = document.querySelector('.currentPlayer')
 const playerXScore = document.querySelector('.playerXScore')
 const playerOScore = document.querySelector('.playerOScore')
+const modalWrapper = document.querySelector('.modalWrapper')
 
 const X_TEXT = 'X';
 const O_TEXT = 'O';
@@ -11,8 +12,6 @@ playerOScore.innerText = O_SCORE
 playerXScore.innerText = X_SCORE
 let currentPlayer = X_TEXT;
 currentPlayerEl.innerText = `Player ${currentPlayer} TURN`
-
-console.log(typeof X_SCORE)
 
 
 // spaes array would help us keep track of what is in the boxes
@@ -29,17 +28,15 @@ function boxClicked(e){
 
         if(playerHasWon() !== false){
             currentPlayerEl.innerText = `Player ${currentPlayer} has won!!!`
+            modalWrapper.style.visibility = "visible"
             let wininngPlayer = currentPlayerEl.innerText
 
             if(wininngPlayer.toString().split('')[7] === "X"){
-                console.log("X has won")
                 X_SCORE++
                 playerXScore.innerText = X_SCORE
-                console.log(`X => ${X_SCORE}`)
             }else{
                 O_SCORE++
                 playerOScore.innerText = O_SCORE
-                console.log(`O => ${O_SCORE}`)
             }
             let winningTiles = playerHasWon()
             winningTiles.map(box => {
@@ -60,45 +57,37 @@ function playerHasWon(){
         }
 
         if(spaces[3] === currentPlayer && spaces[6] === currentPlayer){
-            console.log(typeof currentPlayer)
             return [0,3,6];
         }
 
         if(spaces[4] === currentPlayer && spaces[8] === currentPlayer){
-            console.log(typeof currentPlayer)
             return [0,4,8];
         }
     }
 
     if(spaces[8] === currentPlayer){
         if(spaces[2] === currentPlayer && spaces[5] === currentPlayer){
-            console.log(typeof currentPlayer)
             return [8,2,5];
         }
 
         if(spaces[7] === currentPlayer && spaces[6] === currentPlayer){
-            console.log(typeof currentPlayer)
             return [8,7,6];
         }
 
         if(spaces[4] === currentPlayer && spaces[0] === currentPlayer){
-            console.log(typeof currentPlayer)
             return [8,4,0];
         }
     }
 
     if(spaces[4] === currentPlayer){
         if(spaces[3] === currentPlayer && spaces[5] === currentPlayer){
-            console.log(typeof currentPlayer)
             return [4,3,5];
         }
 
         if(spaces[7] === currentPlayer && spaces[1] === currentPlayer){
-            console.log(typeof currentPlayer)
             return [4,7,1];
         }
         if(spaces[2] === currentPlayer && spaces[6] === currentPlayer){
-            console.log(typeof currentPlayer)
             return [4,2,6];
         }
     }
@@ -116,6 +105,8 @@ function restartGame(){
 
     currentPlayer = X_TEXT;
     currentPlayerEl.innerText = `Player ${currentPlayer} TURN`
+
+    modalWrapper.style.visibility = "hidden"
 }
 
 function resetScore(){
