@@ -90,3 +90,19 @@ button{
 .score button{
     display: inline-block;
 }
+
+@media screen and (max-width:576px){
+    .container{
+        margin: 1rem 0 3rem;
+    }
+
+    #gameBoard{
+        width: 300px;
+    }
+
+    .box{
+        width: 100px;
+        height: 110px;
+        font-size: 70px;
+    }
+}
