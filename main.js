@@ -112,6 +112,11 @@ function restartGame(){
 
     currentPlayer = X_TEXT;
     currentPlayerEl.innerText = `Player ${currentPlayer} TURN`
+}
 
-
+function resetScore(){
+    X_SCORE = 0
+    O_SCORE = 0
+    playerOScore.innerText = O_SCORE
+    playerXScore.innerText = X_SCORE
 }
