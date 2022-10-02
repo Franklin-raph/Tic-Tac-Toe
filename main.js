@@ -125,6 +125,6 @@ function resetScore(){
 
 
 function openNav(){
-    navLinks.style.left = (navLinks.style.left === '0%') ? '-100%' : '0%';
+    navLinks.style.left = (navLinks.style.left === '0%') ? '-120%' : '0%';
     html.style.overflowY = (html.style.overflowY === "hidden") ? 'scroll' : 'hidden'
 }

@@ -29,7 +29,7 @@ nav{
     height: 100vh;
     position: absolute;
     top: 6.8%;
-    left: -100%;
+    left: -120%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,7 +43,7 @@ nav{
 
 .container{
     /* height: 100vh; */
-    padding-top: 4rem;
+    padding-top: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,7 +66,7 @@ button{
     width: 450px;
     display: flex;
     flex-wrap: wrap;
-    margin: 2rem 0;
+    margin: 2rem 0 4rem;
     user-select: none;
 }
 
@@ -94,7 +94,7 @@ button{
 }
 
 .score{
-    margin-top: 50px;
+    margin-top: 7px;
     display: flex;
     text-align: center;
     gap: 10px;
@@ -103,7 +103,7 @@ button{
 
 .scoreNumbers{
     display: flex;
-    gap: 40px;
+    gap: 20px;
 }
 
 .score span{
@@ -124,7 +124,7 @@ button{
 }
 
 .footer{
-    position: relative;
+    /* position: fixed; */
     background-color: #123456;
     color: #fff;
     text-align: center;
@@ -135,7 +135,8 @@ button{
     flex-direction: column;
     padding: 10px;
     gap: 5px;
-    margin-top: 3rem;
+    margin-top: 5rem;
+    bottom: 0;
 }
 
 .modalWrapper{
@@ -161,11 +162,15 @@ button{
     font-size: 40px;
 }
 
+.modalWrapper button{
+    user-select: none;
+}
+
 @media screen and (max-width:576px){
 
     #gameBoard{
         width: 330px;
-        margin: 3rem 0 0;
+        margin: 2rem 0 4rem;
     }
 
     .box{
@@ -175,10 +180,14 @@ button{
     }
 
     nav{
-        padding: 10px;
+        padding: 16px 25px;
     }
 
     .navLinks{
         top: 5.7%;
+    }
+
+    .modalWrapper{
+        top: 6%;
     }
 }
