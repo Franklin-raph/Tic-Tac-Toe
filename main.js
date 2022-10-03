@@ -56,6 +56,7 @@ function boxClicked(e){
     }
 }
 
+
 function playerHasWon(){
     if(spaces[0] === currentPlayer){
         if(spaces[1] === currentPlayer && spaces[2] === currentPlayer){
@@ -99,6 +100,19 @@ function playerHasWon(){
     }
     return false
 }
+
+// function drawFunction(){
+//     if(!spaces.includes("")){
+//         // console.log("Draw")
+//         modalWrapper.style.visibility = "visible"
+//         winnerPlayerText.innerText = `A TIE`
+//         return false
+//     }
+// }
+
+// if(playerHasWon() === false){
+//     drawFunction()
+// }
 
 function restartGame(){
     spaces.fill(null)

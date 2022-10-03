@@ -130,9 +130,8 @@ button{
     text-align: center;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: column;
     padding: 10px;
     gap: 5px;
     margin-top: 5rem;
@@ -166,6 +165,12 @@ button{
     user-select: none;
 }
 
+.playerTurnColor{
+    background-color: #123456;
+    color: #fff;
+    padding: 5px;
+}
+
 @media screen and (max-width:576px){
 
     #gameBoard{
@@ -189,5 +194,9 @@ button{
 
     .modalWrapper{
         top: 6%;
+    }
+
+    .footer{
+        flex-direction: column;
     }
 }
