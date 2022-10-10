@@ -18,7 +18,7 @@ nav{
     background-color: #123456;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+    padding: 16px 40px;
     color: #fff;
     /* position: relative; */
 }
@@ -185,7 +185,7 @@ button{
     }
 
     nav{
-        padding: 16px 25px;
+        padding: 8px 25px;
     }
 
     .navLinks{
